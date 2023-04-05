@@ -1,0 +1,441 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+$colour-primary: #334257;
+$colour-secondary: #476072;
+$colour-tertiary: #548ca8;
+$colour-bg: #dbe6fd;
+$colour-light: #ccc;
+$colour-transluscent: rgba(0, 0, 0, 0.4);
+
+$font-main: "Raleway", sans-serif;
+$font-logo: "Cinzel", sans-serif;
+
+$fs-xsmall: 10px;
+$fs-small: 14px;
+$fs-med: 16px;
+$fs-med-plus: 18px;
+$fs-lrg: 24px;
+$fs-xlrg: 30px;
+
+$padding-small: 7px;
+$padding-med: 15px;
+$padding-lrg: 20px;
+$padding-xlrg: 25px;
+
+$fw-thin: 200;
+$fw-std: 400;
+$fw-bold: 600;
+
+@mixin flex($justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+body {
+  background-color: seashell;
+}
+
+.attribution {
+  font-size: x-small;
+  color: $colour-primary;
+  font-family: $font-logo;
+  position: absolute;
+  top: 235px;
+  right: 50px;
+
+  a {
+    font-family: $font-logo;
+  }
+}
+
+body,
+button,
+a {
+  font-family: $font-main;
+  color: $colour-primary;
+}
+
+.menu {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./images/branding-image-narrow.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  color: #fff;
+}
+
+.menu a {
+  color: $colour-light;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  @include flex(center, center, 10px);
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  padding: $padding-small;
+  background-color: $colour-transluscent;
+}
+
+.logo-img {
+  height: 35px;
+  width: auto;
+  filter: invert(1);
+}
+
+.logo-text {
+  font-family: $font-logo;
+  font-size: $fs-lrg;
+  text-align: center;
+  padding: 0;
+}
+
+.navigation {
+  @include flex(space-evenly, center, 20px);
+  position: absolute;
+  width: 100%;
+  top: 150px;
+}
+
+.navigation button {
+  padding: $padding-small;
+  background-color: $colour-transluscent;
+  color: $colour-light;
+  font-size: $fs-med-plus;
+  border: none;
+  cursor: pointer;
+  font-size: $fs-small;
+}
+
+.navigation button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+  color: #fff;
+}
+
+.acknowledgements {
+  font-size: $fs-xsmall;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: $padding-small;
+  background-color: $colour-transluscent;
+}
+
+.content {
+  padding: $padding-xlrg;
+}
+
+h1 {
+  font-family: $font-logo;
+  padding-bottom: $padding-med;
+  letter-spacing: 0.8px;
+}
+
+p {
+  text-align: justify;
+  line-height: 25px;
+  padding-bottom: $padding-med;
+  letter-spacing: 0.1px;
+}
+
+h2 {
+  padding-bottom: $padding-med;
+}
+
+a {
+  color: $colour-tertiary;
+  text-decoration: none;
+  font-weight: $fw-bold;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+iframe {
+  width: 300px;
+  height: 250px;
+  border: none;
+  padding-bottom: $padding-lrg;
+}
+
+.address {
+  font-family: $font-logo;
+  padding-bottom: 5px;
+  letter-spacing: 0.7px;
+  line-height: 18px;
+  font-weight: 500;
+  font-size: $fs-med;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.menu-item {
+  width: 250px;
+  height: 250px;
+  background-color: plum;
+  border-radius: 5px;
+  margin: auto;
+}
+
+@for $i from 1 through 6 {
+  [data-index="#{$i}"] {
+    background: url("./images/menu-item#{$i}.jpg");
+    background-size: cover;
+  }
+}
+
+.menu-item-caption {
+  font-size: $fs-med;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.sign-up {
+  display: grid;
+  gap: 10px;
+  margin-bottom: $padding-med;
+}
+
+.form-label {
+  padding-bottom: 0;
+  font-family: $font-logo;
+}
+
+.form-input {
+  height: 28px;
+  width: 300px;
+  padding-left: 3px;
+  font-family: $font-main;
+  font-size: $fs-med;
+}
+
+.form-input.invalid {
+  box-shadow: 0 0 1px 1px red;
+}
+
+.form-input:focus {
+  outline: 2px solid $colour-secondary;
+}
+
+.sign-up-btn {
+  background-color: $colour-primary;
+  color: #fff;
+  width: 100px;
+  padding: $padding-small;
+  border: none;
+  font-family: $font-logo;
+  font-size: $fs-med;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.form-section {
+  position: relative;
+}
+
+p.invalid {
+  position: absolute;
+  top: 48px;
+  color: #f00;
+  font-size: $fs-xsmall;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+p.invalid.active {
+  display: block;
+}
+
+@media (min-width: 450px) {
+  .menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("./images/branding-image.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-item {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 650px) {
+  .attribution {
+    top: 30px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .sign-up {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-item {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("./images/branding-image-wide.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .logo {
+    top: 15%;
+    padding: $padding-lrg $padding-med;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 40px;
+    top: 35%;
+  }
+
+  .navigation button {
+    font-size: $fs-med-plus;
+    width: 40%;
+  }
+
+  .acknowledgements {
+    top: auto;
+    right: auto;
+    left: 3%;
+    bottom: 3%;
+  }
+
+  .content {
+    padding: $padding-xlrg;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-item {
+    width: 175px;
+    height: 175px;
+  }
+
+  .sign-up {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1050px) {
+  .logo {
+    gap: 15px;
+  }
+
+  .logo-text {
+    font-size: $fs-xlrg;
+  }
+
+  .content {
+    padding: 30px 70px 30px 50px;
+  }
+
+  h1 {
+    font-size: 35px;
+    padding-bottom: $padding-med;
+  }
+
+  p {
+    font-size: $fs-med-plus;
+    padding-bottom: $padding-xlrg;
+  }
+
+  h2 {
+    padding-bottom: $padding-xlrg;
+  }
+
+  .menu-grid {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-item {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sign-up {
+    grid-template-columns: 1fr 1fr;
+    gap: $padding-lrg;
+  }
+
+  .form-input {
+    width: 250px;
+  }
+
+  .sign-up-btn {
+    font-size: $fs-med-plus;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+  }
+
+  .menu-item {
+    height: 200px;
+    width: 200px;
+  }
+
+  .form-input {
+    width: 300px;
+  }
+}
