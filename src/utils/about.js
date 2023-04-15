@@ -28,7 +28,7 @@ export function showAbout(element) {
   element.appendChild(createElement("p", "Kingston, KT12 L61", "address"));
 
   const attribution = createElement("p", "", "attribution");
-  attribution.innerHTML = `Website by <a href="https://github.com/IceCoffee426">IceCoffee426</a>`;
+  attribution.innerHTML = `Website by <a href="https://github.com/shubsmastan">ShubsMastan</a>`;
   element.appendChild(attribution);
 
   fadeAnimation(element);

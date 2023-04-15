@@ -1,6 +1,6 @@
 # Eat at Nana's Pancake House
 
-This is a website for a fictional restaurant, created as part of the full-stack JavaScript pathway on [The Odin Project](https://www.theodinproject.com/). [Live preview](https://icecoffee426.github.io/nanas-pancake-house).
+This is a website for a fictional restaurant, created as part of the full-stack JavaScript pathway on [The Odin Project](https://www.theodinproject.com/). [Live preview](https://shubsmastan.github.io/nanas-pancake-house).
 
 ## Description
 
@@ -13,7 +13,7 @@ This website has a basic HTML structure and most of the content is added to the 
 
 ## Author
 
-[@IceCoffee426](https://github.com/icecoffee426)
+[@ShubsMastan](https://github.com/shubsmastan)
 
 ## Version History
 

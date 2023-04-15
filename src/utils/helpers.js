@@ -24,30 +24,3 @@ export function fadeAnimation(element) {
     { iterations: 1 }
   );
 }
-
-// export function validateForm(form) {
-//   const inputs = form.getElementsByTagName("input");
-//   let valid = true;
-//   for (let i = 0; i < inputs.length; i++) {
-//     if (inputs[i].id === "confirm-pwd") {
-//       if (inputs[i].value !== inputs[i - 1].value) {
-//         inputs[i].parentNode.querySelector(".invalid").classList.add("active");
-//         inputs[i].classList.add("invalid");
-//         valid = false;
-//       } else {
-//         inputs[i].parentNode
-//           .querySelector(".invalid")
-//           .classList.remove("active");
-//       }
-//     } else if (!inputs[i].checkValidity()) {
-//       inputs[i].parentNode.querySelector(".invalid").classList.add("active");
-//       inputs[i].classList.add("invalid");
-//       valid = false;
-//     } else {
-//       inputs[i].parentNode.querySelector(".invalid").classList.remove("active");
-//     }
-//   }
-//   if (valid) {
-//     alert("Pancake time!");
-//   }
-// }

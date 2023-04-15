@@ -98,7 +98,7 @@ export function showForm(element) {
   firstNameInput.focus();
 
   const attribution = createElement("p", "", "attribution");
-  attribution.innerHTML = `Website by <a href="https://github.com/IceCoffee426">IceCoffee426</a>`;
+  attribution.innerHTML = `Website by <a href="https://github.com/shubsmastan">ShubsMastan</a>`;
   element.appendChild(attribution);
 
   fadeAnimation(element);
