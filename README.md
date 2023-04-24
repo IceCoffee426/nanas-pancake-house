@@ -1,6 +1,6 @@
 # Eat at Nana's Pancake House
 
-[Live preview](https://shubsmastan.github.io/nanas-pancake-house).<br/>
+[Live preview](https://shubsmastan.github.io/nanas-pancake-house).<br/><br/>
 This is a website for a fictional restaurant, created as part of the full-stack JavaScript pathway on [The Odin Project](https://www.theodinproject.com/).
 
 ## Description
