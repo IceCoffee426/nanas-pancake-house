@@ -12,6 +12,7 @@ export function showMenu(element) {
   );
   const menuGrid = createElement("div", "", "menu-grid");
 
+  //USE MAP!!!
   for (let i = 0; i < 6; i++) {
     const menuItem = createElement("div", "", "menu-item");
     switch (i) {

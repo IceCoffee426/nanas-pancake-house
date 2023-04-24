@@ -68,7 +68,7 @@ a {
   color: $colour-primary;
 }
 
-.menu {
+.branding {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("./images/branding-image-narrow.jpg");
   background-size: cover;
@@ -78,12 +78,12 @@ a {
   color: #fff;
 }
 
-.menu a {
+.branding a {
   color: $colour-light;
   text-decoration: none;
 }
 
-.menu a:hover {
+.branding a:hover {
   text-decoration: underline;
 }
 
@@ -277,7 +277,7 @@ p.invalid.active {
 }
 
 @media (min-width: 450px) {
-  .menu {
+  .branding {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url("./images/branding-image.jpg");
     background-size: cover;
@@ -310,12 +310,12 @@ p.invalid.active {
 }
 
 @media (min-width: 800px) {
-  body {
+  #root {
     display: grid;
     grid-template-columns: 2fr 3fr;
   }
 
-  .menu {
+  .branding {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url("./images/branding-image-wide.jpg");
     background-size: cover;
